@@ -1,28 +1,28 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
   root: true,
   extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier',
-    'plugin:vitest-globals/recommended'
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/eslint-config-typescript",
+    "@vue/eslint-config-prettier",
+    "plugin:vitest-globals/recommended"
   ],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': [
-      'error',
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
       {
-        endOfLine: 'auto'
+        endOfLine: "auto"
       }
     ]
   },
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: "latest"
   },
   env: {
-    'vitest-globals/env': true
+    "vitest-globals/env": true
   }
-}
+};
