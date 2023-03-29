@@ -6,23 +6,24 @@
           :to="{ name: 'Home' }"
           class="flex h-full items-center text-2xl font-bold text-brand-green-1"
         >
-          {{ title }}
+          Games Deal
         </router-link>
         <nav class="mx-auto h-full">
           <ul class="flex h-full list-none">
             <li
+              role="listitem"
               v-for="navbarItem in navbarItems"
               :key="navbarItem.text"
               class="ml-12 h-full text-lg font-bold text-brand-white-1 first:ml-0"
             >
-              <router-link :to="navbarItem.url" class="flex h-full items-center">{{
-                navbarItem.text
-              }}</router-link>
+              <router-link :to="navbarItem.url" class="flex h-full items-center">
+                {{ navbarItem.text }}
+              </router-link>
             </li>
           </ul>
         </nav>
         <div class="flex h-full items-center">
-          <button @click="toggleDark()">
+          <button role="button" @click="toggleDark()">
             <font-awesome-icon
               :icon="isDark ? ['fa', 'sun'] : ['fa', 'moon']"
               :class="['h-6 w-6 cursor-pointer text-brand-white-1', darkModeIconClass]"
@@ -40,20 +41,20 @@ import { useDark, useToggle } from "@vueuse/core";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+console.log(isDark.value);
 
 const darkModeIconClass = computed(() => ({
   "hover:text-brand-green-1": !isDark.value,
   "hover:text-brand-warning": isDark.value
 }));
 
-const title = ref("Games Deal");
 const navbarItems = ref([
   {
-    text: "Browse deal now",
+    text: "Browse deals now",
     url: "/Browse/Deals"
   },
   {
-    text: "About",
+    text: "About us",
     url: "/About"
   },
   {
