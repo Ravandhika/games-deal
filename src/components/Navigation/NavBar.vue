@@ -1,6 +1,6 @@
 <template>
   <header class="h-16 w-full">
-    <div class="fixed top-0 left-0 h-16 w-full bg-brand-black-1">
+    <div class="fixed top-0 left-0 z-40 h-16 w-full bg-brand-black-1">
       <div class="mx-auto flex h-full flex-nowrap px-32">
         <router-link
           :to="{ name: 'Home' }"
