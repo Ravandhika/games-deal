@@ -5,5 +5,5 @@
 </template>
 
 <script lang="ts" setup>
-import HomeContent from "@/components/GamesDeal/HomeContent.vue";
+import HomeContent from "@/components/HomePage/HomeContent.vue";
 </script>

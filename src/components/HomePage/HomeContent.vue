@@ -1,7 +1,10 @@
 <template>
   <main class="z-20 flex h-screen flex-col">
     <section class="py-16 px-32">
-      <home-carousel />
+      <div class="grid grid-cols-2 gap-4">
+        <home-header-text />
+        <home-carousel />
+      </div>
     </section>
     <section class="py-16 px-32">
       <h1 class="text-3xl font-bold">Check this out, Today Deals are !!!</h1>
@@ -37,5 +40,6 @@
 </template>
 
 <script lang="ts" setup>
-import homeCarousel from "@/components/GamesDeal/HomeCarousel.vue";
+import HomeCarousel from "./HomeCarousel.vue";
+import HomeHeaderText from "./HomeHeaderText.vue";
 </script>
